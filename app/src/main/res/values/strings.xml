@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">BlindFriendly</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="btn_read">Touch to Read</string>
+</resources>
