@@ -673,9 +673,26 @@ public class Camera2BasicFragment extends Fragment
         textureView.getBitmap(ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
     String textToShow = classifier.classifyFrame(bitmap);
     bitmap.recycle();
-    showToast(textToShow);
+    //// This Line for turn on/off text
+//    String replaceString;
+//    if(textToShow.contains("_")){
+//      replaceString = textToShow.replace("_"," ");
+//    } else {
+//      replaceString = textToShow;
+//    }
+    int dataToFindStringResource;
+    String textFindFromResource;
+    try {
+      dataToFindStringResource = getStringIdentifier(getActivity(),textToShow);
+      textFindFromResource = getResources().getString(dataToFindStringResource);
+    } catch (Exception e){
+      textFindFromResource = getResources().getString(R.string.dont_know);
+    }
+//    showToast(textToShow);
+    showToast(textFindFromResource);
     ////////////////////////////////////////////////////////////
-    speechText = textToShow;
+//    speechText = textToShow;
+    speechText = textFindFromResource;
   }
 
   /** Compares two {@code Size}s based on their areas. */
@@ -719,4 +736,7 @@ public class Camera2BasicFragment extends Fragment
     }
   }
 
+  public static int getStringIdentifier(Context context, String name) {
+    return context.getResources().getIdentifier(name, "string", context.getPackageName());
+  }
 }

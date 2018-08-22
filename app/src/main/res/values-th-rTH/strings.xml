@@ -2,4 +2,8 @@
 <resources>
     <string name="camera_error">อุปกรณ์ไม่สนับสนุน</string>
     <string name="btn_read">กดเพื่ออ่าน</string>
+    <string name="dressing_table">โต๊ะเครื่องแป้ง</string>
+    <string name="sofa">โซฟา</string>
+    <string name="bed">เตียง</string>
+    <string name="dont_know">ไม่สามารถประมวลผลได้</string>
 </resources>

@@ -45,10 +45,12 @@ public class ImageClassifier {
   private static final String TAG = "BlindFriendly";
 
   /** Name of the model file stored in Assets. */
-  private static final String MODEL_PATH = "graph.lite";
+//  private static final String MODEL_PATH = "graph.lite";
+  private static final String MODEL_PATH = "optimizedgraph.lite";
 
   /** Name of the label file stored in Assets. */
-  private static final String LABEL_PATH = "labels.txt";
+//  private static final String LABEL_PATH = "labels.txt";
+  private static final String LABEL_PATH = "retrainedlabels.txt";
 
   /** Number of results to show in the UI. */
   private static final int RESULTS_TO_SHOW = 3;
@@ -221,8 +223,18 @@ public class ImageClassifier {
 //    }
     for (int i = 0; i < 1; ++i) {
       Map.Entry<String, Float> label = sortedLabels.poll();
-      textToShow.insert(0, String.format("%s", label.getKey()));
+//      textToShow.insert(0, String.format("%s", label.getKey()));
+//      Log.i("Label from model",label.getKey());
+      String changedText = String.format("%s", label.getKey());
+      if (changedText.contains(" ")){
+        String replaceString = changedText.replace(" ","_");
+        textToShow.insert(0,replaceString);
+      } else {
+        textToShow.insert(0,changedText);
+      }
+//      Log.i("Label from model",label.getKey());
     }
     return textToShow.toString();
   }
+
 }
