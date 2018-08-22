@@ -2,11 +2,116 @@
     <string name="app_name" translatable="false">BlindFriendly</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="btn_read">Touch to Read</string>
+
+
+    <!-- Furniture -->
     <string name="dressing_table">Dressing Table</string>
     <string name="sofa">Sofa</string>
     <string name="bed">Bed</string>
+    <string name="chair">Chair</string>
+    <string name="air_condition">Air Condition</string>
+    <string name="lamp">Lamp</string>
+    <string name="table">table</string>
+    <string name="computer_desk">Computer Desk</string>
+    <string name="shelves">Shelves</string>
+    <string name="shoe_rack">Shoe Rack</string>
+    <string name="wardrobe">Wardrobe</string>
+    <string name="door">Door</string>
+    <string name="curtain">Curtain</string>
+    <string name="fan">Fan</string>
+    <string name="window">Window</string>
 
+
+    <!-- Electronic -->
+    <string name="microwave">Microwave</string>
+    <string name="projector">Projector</string>
+    <string name="refrigerator">Refrigerator</string>
+    <string name="television">Television</string>
+
+
+    <!-- Life -->
+    <string name="glasses">Glasses</string>
+    <string name="watch">Watch</string>
+    <string name="clock">Clock</string>
+    <string name="shoes">Shoes</string>
+    <string name="backpack">Backpack</string>
+    <string name="bottle">Bottle</string>
+    <string name="box">Box</string>
+    <string name="cup">Cup</string>
+    <string name="earrings">Earrings</string>
+    <string name="glass">Glass</string>
+    <string name="glove">Glove</string>
+    <string name="guitar">Guitar</string>
+    <string name="helmet">Helmet</string>
+    <string name="jar_flower">Jar Flower</string>
+    <string name="keys">Keys</string>
+    <string name="pen">Pen</string>
+    <string name="pencil">Pencil</string>
+    <string name="plastic_bag">Plastic Bag</string>
+    <string name="rain_coat">Rain Coat</string>
+    <string name="shirt">Shirt</string>
+    <string name="sneakers">Sneakers</string>
+    <string name="socks">Socks</string>
+    <string name="spoon_folk">spoon_folk</string>
+    <string name="toothbrush">Toothbrush</string>
+    <string name="umbrella">Umbrella</string>
+
+
+
+    <!-- Food -->
+    <string name="fried_rice">Fried Rice</string>
+    <string name="sausage">Sausage</string>
+    <string name="sushi">Sushi</string>
+    <string name="cao_bang">Cao Bang</string>
+    <string name="yen_ta_four">Yen ta four</string>
+    <string name="curry">Curry</string>
+    <string name="gourd_soup">Gourd Soup</string>
+    <string name="rice_gruel">Rice Gruel</string>
+    <string name="fried_chicken">Fried Chicken</string>
+    <string name="grilled_chicken">Grilled Chicken</string>
+    <string name="omelet">Omelet</string>
+    <string name="fried_egg">Fried Egg</string>
+    <string name="egg_spoon">Egg Spoon</string>
+    <string name="sweet_and_sour_eggs">Sweet and Sour Eggs</string>
+    <string name="ice_cream">Ice cream</string>
+    <string name="banana_in_coconut_milk">Banana in Coconut milk</string>
+    <string name="noodles">Noodles</string>
+    <string name="ka_nom_krok">Ka nom krok</string>
+    <string name="dim_sum">Dim sum</string>
+    <string name="sticky_rice">Sticky Rice</string>
+    <string name="sea_food">Seafood</string>
+    <string name="pork_grilled">Grilled Pork</string>
+    <string name="papaya_salad">Papaya Salad</string>
+    <string name="spicy_minced_meat_salad">Spicy minced meat Salad</string>
+    <string name="lod_chong">Lod Chong</string>
+    <string name="spicy_salad">Spicy Salad</string>
+    <string name="foi_thong">Foi Thong</string>
+    <string name="noodle_fried_pink">Noodle fried pink</string>
+    <string name="sauteed_mixed_vegetables_in_oyster_sauce">Sauteed mixed vegetables in oyster sauce</string>
+    <string name="spicy_fried_with_basil_leaves">Spicy fried with basil leaves</string>
+    <string name="stir_fried">Stir Fried</string>
+    <string name="pud_thai">Pud Thai</string>
+    <string name="crab_stick">Crab Stick</string>
+    <string name="steam_squid_with_spicy_chilli_and_lemon_sauce">Steam squid with spicy chili and lemon sauce</string>
+    <string name="steam_fish_with_spicy_chilli_and_lemon_sauce">Steam fish with spicy chili and lemon sauce</string>
+    <string name="bua_loi">Bua Loi</string>
+    <string name="egg_noodle_soup_with_wonton">Egg noodle soup with wonton</string>
+    <string name="coconut_milk_stewed_pumpkin">Coconut milk stewed pumpkin</string>
+    <string name="sliced_grilled_pork_salad">Sliced grilled pork salad</string>
+    <string name="green_beans_in_syrup">Green beans in syrup</string>
+    <string name="hot_and_sour_soup">Tom Yum</string>
+    <string name="clear_soup">Clear Soup</string>
+    <string name="buns">Buns</string>
+    <string name="stir_fried_minced_chicken_with_yellow_curry_paste">Stir fried minced chicken with yellow curry paste</string>
+    <string name="muslim_yellow_rice_with_chicken">Muslim yellow rice with chicken</string>
+    <string name="cooked_rice">Cooked Rice</string>
+    <string name="rice_with_chicken_fried">Rice with chicken fried</string>
+    <string name="hainanese_chicken_rice">Hainanese chicken rice</string>
+    <string name="rice_mixed_with_shrimp_paste">Rice mixed with shrimp paste</string>
+    <string name="stewed_pork_leg_on_rice">Stewed pork leg on rice</string>
 
 
     <string name="dont_know">I don\'t know. Maybe it\'s not contain in application </string>
+    <string name="touch_to_specific">Touch this button for speak specific things</string>
+    <string name="touch_to_see_around">Touch this button for speak some environment in front of you</string>
 </resources>

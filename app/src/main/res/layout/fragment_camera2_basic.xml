@@ -55,6 +55,7 @@
                 android:layout_height="62dp"
 
                 android:background="@color/colorAccent"
+                android:contentDescription="@string/touch_to_specific"
                 android:fontFamily="serif"
                 android:gravity="center_vertical|center"
                 android:text="@string/btn_read"
