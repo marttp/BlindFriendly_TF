@@ -312,7 +312,7 @@ public class Camera2BasicFragment extends Fragment
     button = view.findViewById(R.id.btnClassification);
     buttonEnvironment = view.findViewById(R.id.btnEnvironment);
 
-    textView.setVisibility(View.GONE);
+//    textView.setVisibility(View.GONE);
 //    button.setOnClickListener(v -> Toast.makeText(getActivity(), "Clicked on Button", Toast.LENGTH_LONG).show());
     button.setOnClickListener(v -> TextSpeech.getInstance(getActivity()).speak(speechText));
     buttonEnvironment.setOnClickListener(v -> seeEnvironment(getActivity()));
@@ -722,15 +722,18 @@ public class Camera2BasicFragment extends Fragment
     }
     int dataToFindStringResource;
     String textFindFromResource;
+    String textFindFromResourceNew;
 //    Log.i("textToShow",textToShow);
     try {
       dataToFindStringResource = getStringIdentifier(getActivity(),textToShow);
       textFindFromResource = opinion + " " + getResources().getString(dataToFindStringResource);
+      textFindFromResourceNew = getResources().getString(dataToFindStringResource);
     } catch (Exception e){
       textFindFromResource = getResources().getString(R.string.dont_know);
+      textFindFromResourceNew = getResources().getString(R.string.dont_know);
     }
 //    showToast(textToShow);
-    showToast(textFindFromResource);
+    showToast(textFindFromResourceNew);
     ////////////////////////////////////////////////////////////
 //    speechText = textToShow;
 //    Log.i("textToShow",textFindFromResource);
