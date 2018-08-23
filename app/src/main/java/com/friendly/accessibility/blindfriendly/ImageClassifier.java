@@ -226,6 +226,7 @@ public class ImageClassifier {
 //      textToShow.insert(0, String.format("%s", label.getKey()));
 //      Log.i("Label from model",label.getKey());
       String changedText = String.format("%s", label.getKey());
+//      Log.i("Label from model",label.getKey() + " " + label.getValue());
       if (changedText.contains(" ")){
         String replaceString = changedText.replace(" ","_");
         textToShow.insert(0,replaceString);

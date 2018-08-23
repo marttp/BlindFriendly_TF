@@ -2,8 +2,7 @@
     <string name="app_name" translatable="false">BlindFriendly</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="btn_read">Touch to Read</string>
-
-
+    <string name="btn_see_around">Touch to See</string>
     <!-- Furniture -->
     <string name="dressing_table">Dressing Table</string>
     <string name="sofa">Sofa</string>
@@ -21,14 +20,23 @@
     <string name="fan">Fan</string>
     <string name="window">Window</string>
 
-
     <!-- Electronic -->
     <string name="microwave">Microwave</string>
     <string name="projector">Projector</string>
     <string name="refrigerator">Refrigerator</string>
     <string name="television">Television</string>
-
-
+    <string name="adapter_laptop">Adapter Laptop</string>
+    <string name="earphone">Earphone</string>
+    <string name="flash_drive">Flash Drive</string>
+    <string name="headphone">Headphone</string>
+    <string name="keyboard">Keyboard</string>
+    <string name="laptop">Laptop</string>
+    <string name="microphone">Microphone</string>
+    <string name="monitor">Monitor</string>
+    <string name="mouse">Mouse</string>
+    <string name="smartphone">Smart Phone</string>
+    <string name="computer">Computer</string>
+    <string name="speaker">Speaker</string>
     <!-- Life -->
     <string name="glasses">Glasses</string>
     <string name="watch">Watch</string>
@@ -114,4 +122,12 @@
     <string name="dont_know">I don\'t know. Maybe it\'s not contain in application </string>
     <string name="touch_to_specific">Touch this button for speak specific things</string>
     <string name="touch_to_see_around">Touch this button for speak some environment in front of you</string>
+
+    <!-- Opinion -->
+    <string name="something_like">I see something like</string>
+    <string name="opn0">I see</string>
+    <string name="opn1">I\'m not sure. It\'s a</string>
+    <string name="opn2">It\'s</string>
+    <string name="opn3">I think it\'s a</string>
+    <string name="opn4">I see something like a</string>
 </resources>

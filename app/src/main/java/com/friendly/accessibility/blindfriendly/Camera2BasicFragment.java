@@ -58,6 +58,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.ml.vision.FirebaseVision;
+import com.google.firebase.ml.vision.cloud.FirebaseVisionCloudDetectorOptions;
+import com.google.firebase.ml.vision.cloud.label.FirebaseVisionCloudLabel;
+import com.google.firebase.ml.vision.cloud.label.FirebaseVisionCloudLabelDetector;
+import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -83,9 +90,17 @@ public class Camera2BasicFragment extends Fragment
   private final Object lock = new Object();
   private boolean runClassifier = false;
   private boolean checkedPermissions = false;
+  private ImageClassifier classifier;
+
+
   private TextView textView;
   private Button button;
-  private ImageClassifier classifier;
+  private Button buttonEnvironment;
+  private static FirebaseVisionImage image;
+  private static FirebaseVisionCloudDetectorOptions options = new FirebaseVisionCloudDetectorOptions.Builder()
+          .setModelType(FirebaseVisionCloudDetectorOptions.LATEST_MODEL)
+          .setMaxResults(15)
+          .build();
 
   String speechText = "";
 
@@ -295,9 +310,12 @@ public class Camera2BasicFragment extends Fragment
     textureView = view.findViewById(R.id.cameraTexture);
     textView = view.findViewById(R.id.textTensorFlowLabel);
     button = view.findViewById(R.id.btnClassification);
+    buttonEnvironment = view.findViewById(R.id.btnEnvironment);
 
+    textView.setVisibility(View.GONE);
 //    button.setOnClickListener(v -> Toast.makeText(getActivity(), "Clicked on Button", Toast.LENGTH_LONG).show());
     button.setOnClickListener(v -> TextSpeech.getInstance(getActivity()).speak(speechText));
+    buttonEnvironment.setOnClickListener(v -> seeEnvironment(getActivity()));
 
   }
 
@@ -671,6 +689,9 @@ public class Camera2BasicFragment extends Fragment
     }
     Bitmap bitmap =
         textureView.getBitmap(ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
+    /////////////////////////////////////////////////////////////////////////////
+    image = FirebaseVisionImage.fromBitmap(bitmap);
+    /////////////////////////////////////////////////////////////////////////////
     String textToShow = classifier.classifyFrame(bitmap);
     bitmap.recycle();
     //// This Line for turn on/off text
@@ -680,11 +701,31 @@ public class Camera2BasicFragment extends Fragment
 //    } else {
 //      replaceString = textToShow;
 //    }
+    int selectOpinion = (int) (Math.random() * 5);
+    String opinion = "";
+    switch (selectOpinion){
+      case 0:
+        opinion = getActivity().getResources().getString(R.string.opn0);
+        break;
+      case 1:
+        opinion = getActivity().getResources().getString(R.string.opn1);
+        break;
+      case 2:
+        opinion = getActivity().getResources().getString(R.string.opn2);
+        break;
+      case 3:
+        opinion = getActivity().getResources().getString(R.string.opn3);
+        break;
+      case 4:
+        opinion = getActivity().getResources().getString(R.string.opn4);
+        break;
+    }
     int dataToFindStringResource;
     String textFindFromResource;
+//    Log.i("textToShow",textToShow);
     try {
       dataToFindStringResource = getStringIdentifier(getActivity(),textToShow);
-      textFindFromResource = getResources().getString(dataToFindStringResource);
+      textFindFromResource = opinion + " " + getResources().getString(dataToFindStringResource);
     } catch (Exception e){
       textFindFromResource = getResources().getString(R.string.dont_know);
     }
@@ -692,6 +733,7 @@ public class Camera2BasicFragment extends Fragment
     showToast(textFindFromResource);
     ////////////////////////////////////////////////////////////
 //    speechText = textToShow;
+//    Log.i("textToShow",textFindFromResource);
     speechText = textFindFromResource;
   }
 
@@ -738,5 +780,53 @@ public class Camera2BasicFragment extends Fragment
 
   public static int getStringIdentifier(Context context, String name) {
     return context.getResources().getIdentifier(name, "string", context.getPackageName());
+  }
+
+  private void seeEnvironment(Context context){
+    FirebaseVisionCloudLabelDetector detector = FirebaseVision.getInstance().getVisionCloudLabelDetector(options);
+    try {
+      Task<List<FirebaseVisionCloudLabel>> result =
+              detector.detectInImage(image)
+                      .addOnSuccessListener(
+                              labels -> {
+                                StringBuilder speechText = new StringBuilder();
+                                for (FirebaseVisionCloudLabel label: labels) {
+                                  String text = label.getLabel();
+                                  String entityId = label.getEntityId();
+                                  float confidence = label.getConfidence();
+                                  if(confidence >= 0.6){
+//                                    Log.i("Text from Cloud",text);
+//                                    Log.i("entityId from Cloud",entityId);
+//                                    Log.i("confidence from Cloud", String.valueOf(confidence));
+
+                                    //Logic for translate
+//                                    if(text.contains(" ")){
+//                                      String newText = text.replace(" ", "_");
+//                                      speechText.append(newText).append(" ");
+//                                    } else {
+//                                      speechText.append(text).append(" ");
+//                                    }
+                                    speechText.append(text).append(" ");
+                                  }
+                                }
+                                /*
+                                * Place logic for find Text in XML file
+                                * */
+                                if(String.valueOf(speechText) == ""){
+                                  Log.i("Concat from Cloud", context.getResources().getString(R.string.dont_know));
+                                  TextSpeech.getInstance(context).speak(context.getResources().getString(R.string.something_like));
+                                } else {
+                                  String speech = context.getResources().getString(R.string.something_like) + " " + speechText;
+                                  TextSpeech.getInstance(context).speak(String.valueOf(speech));
+                                  Log.i("Concat from Cloud", String.valueOf(speech));
+
+                                }
+//                                Log.i("Concat from Cloud", String.valueOf(speechText));
+                              })
+                      .addOnFailureListener(
+                              e -> TextSpeech.getInstance(context).speak(context.getResources().getString(R.string.dont_know)));
+    } catch (Exception e){
+      System.out.println(e);
+    }
   }
 }

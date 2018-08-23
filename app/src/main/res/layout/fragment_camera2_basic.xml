@@ -51,20 +51,36 @@
 
             <Button
                 android:id="@+id/btnClassification"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="62dp"
-
+                android:layout_marginEnd="5dp"
                 android:background="@color/colorAccent"
                 android:contentDescription="@string/touch_to_specific"
                 android:fontFamily="serif"
                 android:gravity="center_vertical|center"
                 android:text="@string/btn_read"
                 android:textColor="@android:color/white"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnEnvironment"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnEnvironment"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
+                android:background="@color/colorAccent"
+                android:contentDescription="@string/touch_to_see_around"
+                android:fontFamily="serif"
+                android:gravity="center_vertical|center"
+                android:text="@string/btn_see_around"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </android.support.constraint.ConstraintLayout>
 
     </FrameLayout>

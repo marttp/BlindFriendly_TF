@@ -5,7 +5,7 @@
     <string name="dressing_table">โต๊ะเครื่องแป้ง</string>
     <string name="sofa">โซฟา</string>
     <string name="bed">เตียง</string>
-    <string name="dont_know">ไม่สามารถประมวลผลได้</string>
+    <string name="dont_know">ไม่สามารถประมวลผลได้ หรือมีการเรียนรู้น้อยเกินไป</string>
     <string name="chair">เก้าอี้</string>
     <string name="air_condition">เครื่องปรับอากาศ</string>
     <string name="lamp">โคมไฟ</string>
@@ -97,6 +97,25 @@
     <string name="hainanese_chicken_rice">ข้าวมันไก่</string>
     <string name="rice_mixed_with_shrimp_paste">ข้าวคลุกกะปิ</string>
     <string name="stewed_pork_leg_on_rice">ข้าวขาหมู</string>
-    <string name="touch_to_specific">กดปุ่มนี้เพื่อตรวจสอบวบางสิ่งที่อยู่ตรงหน้าของท่าน</string>
+    <string name="touch_to_specific">กดปุ่มนี้เพื่อตรวจสอบบางสิ่งที่อยู่ตรงหน้าของท่าน</string>
     <string name="touch_to_see_around">กดปุ่มนี้เพื่อตรวจสอบสภาพแวดล้อมตรงหน้าของท่าน</string>
+    <string name="adapter_laptop">อะแดพเตอร์</string>
+    <string name="earphone">หูฟัง</string>
+    <string name="flash_drive">แฟลชไดรฟ์</string>
+    <string name="headphone">หูฟัง</string>
+    <string name="keyboard">แป้นพิมพ์</string>
+    <string name="laptop">คอมพิวเตอร์พกพา</string>
+    <string name="microphone">ไมโครโฟน</string>
+    <string name="monitor">จอมอนิเตอร์</string>
+    <string name="mouse">เมาส์</string>
+    <string name="smartphone">สมาร์ทโฟน</string>
+    <string name="computer">คอมพิวเตอร์</string>
+    <string name="speaker">ลำโพง</string>
+    <string name="btn_see_around">ดูสภาพแวดล้อม</string>
+    <string name="something_like">ฉันเห็นบางอย่าง คล้ายกับ</string>
+    <string name="opn0">ฉันเห็น</string>
+    <string name="opn1">ฉันก็ไม่แน่ใจ อาจจะเป็น</string>
+    <string name="opn2">นี่คือ</string>
+    <string name="opn3">ฉันคิดว่านี่คือ</string>
+    <string name="opn4">ฉันบางอย่างที่คล้ายกับ</string>
 </resources>

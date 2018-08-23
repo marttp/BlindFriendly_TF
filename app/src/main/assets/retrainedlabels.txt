@@ -1,7 +1,9 @@
+adater laptop
 air condition
 backpack
 banana in coconut milk
 bed
+book
 bottle
 box
 bua loi
@@ -11,6 +13,7 @@ chair
 clear soup
 clock
 coconut milk stewed pumpkin
+computer
 computer desk
 cooked rice
 crab stick
@@ -20,10 +23,12 @@ curtain
 dim sum
 door
 dressing table
+earphone
 earrings
 egg noodle soup with wonton
 egg spoon
 fan
+flash drive
 foi thong
 fried chicken
 fried egg
@@ -36,15 +41,21 @@ green beans in syrup
 grilled chicken
 guitar
 hainanese chicken rice
+headphone
 helmet
 hot and sour soup
 ice cream
 jar flower
 ka nom krok
+keyboard
 keys
 lamp
+laptop
 lod chong
+microphone
 microwave
+monitor
+mouse
 muslim yellow rice with chicken
 noodle fried pink
 noodles
@@ -69,9 +80,11 @@ shirt
 shoe rack
 shoes
 sliced grilled pork salad
+smartphone
 sneakers
 socks
 sofa
+speaker
 spicy fried with basil leaves
 spicy minced meat salad
 spicy salad
