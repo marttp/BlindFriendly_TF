@@ -10,6 +10,14 @@ assert file(project.ext.ASSET_DIR + "/graph.lite").exists()
 assert file(project.ext.ASSET_DIR + "/labels.txt").exists()
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'BlindFriendlyKey'
+            keyPassword 'blindFriendlyCPE'
+            storeFile file('D:/keystore/lvlart.jks')
+            storePassword '957852456'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.friendly.accessibility.blindfriendly"
@@ -18,11 +26,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
     aaptOptions {
@@ -33,6 +46,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    productFlavors {
+    }
 }
 repositories {
     maven {
@@ -42,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -51,13 +66,10 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.android.support:support-v13:27.1.1'
-
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-ml-vision:16.0.0'
     implementation 'com.google.firebase:firebase-ml-vision-image-label-model:15.0.0'
-
     implementation 'org.tensorflow:tensorflow-lite:+'
-
     testImplementation 'junit:junit:4.12'
 }
 

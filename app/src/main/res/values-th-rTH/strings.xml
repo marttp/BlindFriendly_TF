@@ -10,7 +10,7 @@
     <string name="air_condition">เครื่องปรับอากาศ</string>
     <string name="lamp">โคมไฟ</string>
     <string name="table">โต๊ะ</string>
-    <string name="computer_desk">โค๊ะคอมพิวเตอร์</string>
+    <string name="computer_desk">โต๊ะคอมพิวเตอร์</string>
     <string name="shelves">ชั้นวางของ</string>
     <string name="shoe_rack">ชั้นวางรองเท้า</string>
     <string name="wardrobe">ตู้เสื้อผ้า</string>
@@ -19,7 +19,7 @@
     <string name="fan">พัดลม</string>
     <string name="window">หน้าต่าง</string>
     <string name="microwave">เตาไมโครเวฟ</string>
-    <string name="projector">โปรเจคเตอร์</string>
+    <string name="projector">ที่ฉายภาพ</string>
     <string name="refrigerator">ตู้เย็น</string>
     <string name="television">โทรทัศน์</string>
     <string name="glasses">แว่นตา</string>
@@ -117,5 +117,5 @@
     <string name="opn1">ฉันก็ไม่แน่ใจ อาจจะเป็น</string>
     <string name="opn2">นี่คือ</string>
     <string name="opn3">ฉันคิดว่านี่คือ</string>
-    <string name="opn4">ฉันบางอย่างที่คล้ายกับ</string>
+    <string name="opn4">ฉันเห็นบางอย่างที่คล้ายกับ</string>
 </resources>
